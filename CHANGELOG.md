@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.6.4](https://github.com/npm/node-semver/compare/v7.6.3...v7.6.4) (2024-12-04)
+### Documentation
+* [`868d4bb`](https://github.com/npm/node-semver/commit/868d4bbe3d318c52544f38d5f9977a1103e924c2) [#749](https://github.com/npm/node-semver/pull/749) clarify comment about obsolete prefixes (#749) (@mbtools, @ljharb)
+### Chores
+* [`145c554`](https://github.com/npm/node-semver/commit/145c554b8c7b7ecfcb451153ad18bdb2f24ad10d) [#741](https://github.com/npm/node-semver/pull/741) bump @npmcli/eslint-config from 4.0.5 to 5.0.0 (@dependabot[bot])
+* [`0b812d5`](https://github.com/npm/node-semver/commit/0b812d5fb5fbb208e89dc1250e2efafeaa549437) [#744](https://github.com/npm/node-semver/pull/744) postinstall for dependabot template-oss PR (@hashtagchris)
+* [`6502a15`](https://github.com/npm/node-semver/commit/6502a15af34181b14a443d38bb75fc2d84bff0f9) [#744](https://github.com/npm/node-semver/pull/744) bump @npmcli/template-oss from 4.23.1 to 4.23.3 (@dependabot[bot])
+
 ## [7.6.3](https://github.com/npm/node-semver/compare/v7.6.2...v7.6.3) (2024-07-16)
 
 ### Bug Fixes
