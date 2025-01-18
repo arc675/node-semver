@@ -1,0 +1,307 @@
+2024-11-12T06:28:27.2717640Z Current runner version: '2.320.0'
+2024-11-12T06:28:27.2742339Z ##[group]Operating System
+2024-11-12T06:28:27.2743004Z Ubuntu
+2024-11-12T06:28:27.2743308Z 22.04.5
+2024-11-12T06:28:27.2743752Z LTS
+2024-11-12T06:28:27.2744111Z ##[endgroup]
+2024-11-12T06:28:27.2744453Z ##[group]Runner Image
+2024-11-12T06:28:27.2744984Z Image: ubuntu-22.04
+2024-11-12T06:28:27.2745380Z Version: 20241103.1.0
+2024-11-12T06:28:27.2746425Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20241103.1/images/ubuntu/Ubuntu2204-Readme.md
+2024-11-12T06:28:27.2747863Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20241103.1
+2024-11-12T06:28:27.2748684Z ##[endgroup]
+2024-11-12T06:28:27.2749163Z ##[group]Runner Image Provisioner
+2024-11-12T06:28:27.2749665Z 2.0.384.1
+2024-11-12T06:28:27.2749988Z ##[endgroup]
+2024-11-12T06:28:27.2765661Z ##[group]GITHUB_TOKEN Permissions
+2024-11-12T06:28:27.2767464Z Contents: write
+2024-11-12T06:28:27.2767875Z Metadata: read
+2024-11-12T06:28:27.2768469Z PullRequests: write
+2024-11-12T06:28:27.2769109Z ##[endgroup]
+2024-11-12T06:28:27.2771276Z Secret source: Actions
+2024-11-12T06:28:27.2771984Z Prepare workflow directory
+2024-11-12T06:28:27.3412261Z Prepare all required actions
+2024-11-12T06:28:27.3569026Z Getting action download info
+2024-11-12T06:28:27.5901134Z Download action repository 'actions/checkout@v4' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2024-11-12T06:28:27.7126370Z Download action repository 'actions/setup-node@v4' (SHA:39370e3970a6d050c480ffad4ff0ed4d3fdee5af)
+2024-11-12T06:28:27.8490361Z Download action repository 'aws-actions/configure-aws-credentials@v4' (SHA:e3dd6a429d7300a6a4c196c26e071d42e0343502)
+2024-11-12T06:28:28.2400495Z Download action repository 'serverless/github-action@v4' (SHA:277b8103bb77de9687e8d739e43fc34da3d6620d)
+2024-11-12T06:28:28.6125279Z Complete job name: deploy-pr-preview
+2024-11-12T06:28:28.6751163Z ##[group]Build container for action use: '/home/runner/work/_actions/serverless/github-action/v4/Dockerfile'.
+2024-11-12T06:28:28.6849614Z ##[command]/usr/bin/docker build -t 004bf0:0dddb1b98c02490cbd3e7567986a48ca -f "/home/runner/work/_actions/serverless/github-action/v4/Dockerfile" "/home/runner/work/_actions/serverless/github-action/v4"
+2024-11-12T06:28:33.0470813Z #0 building with "default" instance using docker driver
+2024-11-12T06:28:33.0471483Z 
+2024-11-12T06:28:33.0471830Z #1 [internal] load build definition from Dockerfile
+2024-11-12T06:28:33.0472625Z #1 transferring dockerfile: 611B done
+2024-11-12T06:28:33.0475896Z #1 DONE 0.0s
+2024-11-12T06:28:33.0476245Z 
+2024-11-12T06:28:33.0476802Z #2 [auth] nikolaik/python-nodejs:pull token for registry-1.docker.io
+2024-11-12T06:28:33.1970141Z #2 DONE 0.0s
+2024-11-12T06:28:33.1970461Z 
+2024-11-12T06:28:33.1970967Z #3 [internal] load metadata for docker.io/nikolaik/python-nodejs:python3.12-nodejs20-slim
+2024-11-12T06:28:33.4675051Z #3 DONE 0.5s
+2024-11-12T06:28:33.5864043Z 
+2024-11-12T06:28:33.5865206Z #4 [internal] load .dockerignore
+2024-11-12T06:28:33.5866041Z #4 transferring context: 2B done
+2024-11-12T06:28:33.5866743Z #4 DONE 0.0s
+2024-11-12T06:28:33.5867124Z 
+2024-11-12T06:28:33.5868448Z #5 [1/2] FROM docker.io/nikolaik/python-nodejs:python3.12-nodejs20-slim@sha256:b6c721f9c80feb4de5aab4d59a0ebca5b1534b6eb3b7cf50d514b0320598e6be
+2024-11-12T06:28:33.5871370Z #5 resolve docker.io/nikolaik/python-nodejs:python3.12-nodejs20-slim@sha256:b6c721f9c80feb4de5aab4d59a0ebca5b1534b6eb3b7cf50d514b0320598e6be done
+2024-11-12T06:28:33.5873772Z #5 sha256:6e542df1f9086c28220f1ba1afee2bffa321fd750886c8a038aed315f6dda4cd 2.01kB / 2.01kB done
+2024-11-12T06:28:33.5875549Z #5 sha256:6b08635bc45979d48377aae05c976d9749710636fb0603fb432bd474aa732780 0B / 3.51MB 0.1s
+2024-11-12T06:28:33.5877325Z #5 sha256:b6c721f9c80feb4de5aab4d59a0ebca5b1534b6eb3b7cf50d514b0320598e6be 1.61kB / 1.61kB done
+2024-11-12T06:28:33.5881041Z #5 sha256:b33f7b2b11e22b964af18debb2dc230add894742578f68014a4f46a3242bc75c 8.13kB / 8.13kB done
+2024-11-12T06:28:33.5882222Z #5 sha256:302e3ee498053a7b5332ac79e8efebec16e900289fc1ecd1c754ce8fa047fcab 0B / 29.13MB 0.1s
+2024-11-12T06:28:33.5883459Z #5 sha256:18bb7c8edce25e4c4044ecea0a2d9ed1a0b9f9bcccc6e694aef4e30fab0fcf79 13.41MB / 13.41MB 0.1s
+2024-11-12T06:28:33.7864911Z #5 sha256:6b08635bc45979d48377aae05c976d9749710636fb0603fb432bd474aa732780 3.51MB / 3.51MB 0.1s done
+2024-11-12T06:28:33.7866806Z #5 sha256:302e3ee498053a7b5332ac79e8efebec16e900289fc1ecd1c754ce8fa047fcab 29.13MB / 29.13MB 0.3s
+2024-11-12T06:28:33.7870827Z #5 sha256:18bb7c8edce25e4c4044ecea0a2d9ed1a0b9f9bcccc6e694aef4e30fab0fcf79 13.41MB / 13.41MB 0.1s done
+2024-11-12T06:28:33.7874304Z #5 sha256:8341816e3d13e8e5d633d75e45017ead6bcfe6ed0af190ee6e9332134aaad1ff 250B / 250B 0.2s done
+2024-11-12T06:28:33.7876198Z #5 sha256:4776ce5c9d229932156e3d8af45212f821f576b9618bdda14a598009a8fa5aab 3.31kB / 3.31kB 0.2s done
+2024-11-12T06:28:33.7879885Z #5 sha256:f85ca3cd33c2f9f02b361962ac5ebc99c4e1686a3149d8aeaf463a97ccc9f16e 4.81MB / 4.81MB 0.2s done
+2024-11-12T06:28:33.7881445Z #5 sha256:161385205a51bf9ba008a8b886115c870c8efcb4aa39684196258a99783e7c70 12.58MB / 48.25MB 0.3s
+2024-11-12T06:28:33.7884723Z #5 sha256:abc607d67610d44c987a738512646ce58c6fdefdcbf470491a091c605c328e54 217B / 217B 0.3s done
+2024-11-12T06:28:33.7885696Z #5 sha256:8fe0d2a6246dbd2d1ea17e2b74b967c9be4786b8651428d0dad86db3be07ba93 0B / 95.24MB 0.3s
+2024-11-12T06:28:33.8865022Z #5 sha256:302e3ee498053a7b5332ac79e8efebec16e900289fc1ecd1c754ce8fa047fcab 29.13MB / 29.13MB 0.3s done
+2024-11-12T06:28:33.8866995Z #5 sha256:161385205a51bf9ba008a8b886115c870c8efcb4aa39684196258a99783e7c70 36.70MB / 48.25MB 0.4s
+2024-11-12T06:28:33.8868588Z #5 sha256:8fe0d2a6246dbd2d1ea17e2b74b967c9be4786b8651428d0dad86db3be07ba93 11.38MB / 95.24MB 0.4s
+2024-11-12T06:28:33.8870152Z #5 extracting sha256:302e3ee498053a7b5332ac79e8efebec16e900289fc1ecd1c754ce8fa047fcab
+2024-11-12T06:28:34.0705705Z #5 sha256:161385205a51bf9ba008a8b886115c870c8efcb4aa39684196258a99783e7c70 48.25MB / 48.25MB 0.5s done
+2024-11-12T06:28:34.0707540Z #5 sha256:8fe0d2a6246dbd2d1ea17e2b74b967c9be4786b8651428d0dad86db3be07ba93 31.46MB / 95.24MB 0.5s
+2024-11-12T06:28:34.1774879Z #5 sha256:8fe0d2a6246dbd2d1ea17e2b74b967c9be4786b8651428d0dad86db3be07ba93 47.19MB / 95.24MB 0.6s
+2024-11-12T06:28:34.2787035Z #5 sha256:8fe0d2a6246dbd2d1ea17e2b74b967c9be4786b8651428d0dad86db3be07ba93 59.77MB / 95.24MB 0.7s
+2024-11-12T06:28:34.3860918Z #5 sha256:8fe0d2a6246dbd2d1ea17e2b74b967c9be4786b8651428d0dad86db3be07ba93 93.32MB / 95.24MB 0.9s
+2024-11-12T06:28:34.6512701Z #5 sha256:8fe0d2a6246dbd2d1ea17e2b74b967c9be4786b8651428d0dad86db3be07ba93 95.24MB / 95.24MB 1.0s done
+2024-11-12T06:28:34.9590124Z #5 extracting sha256:302e3ee498053a7b5332ac79e8efebec16e900289fc1ecd1c754ce8fa047fcab 1.1s done
+2024-11-12T06:28:34.9591729Z #5 extracting sha256:6b08635bc45979d48377aae05c976d9749710636fb0603fb432bd474aa732780
+2024-11-12T06:28:35.2242725Z #5 extracting sha256:6b08635bc45979d48377aae05c976d9749710636fb0603fb432bd474aa732780 0.1s done
+2024-11-12T06:28:35.2404354Z #5 extracting sha256:18bb7c8edce25e4c4044ecea0a2d9ed1a0b9f9bcccc6e694aef4e30fab0fcf79
+2024-11-12T06:28:35.8688980Z #5 extracting sha256:18bb7c8edce25e4c4044ecea0a2d9ed1a0b9f9bcccc6e694aef4e30fab0fcf79 0.5s done
+2024-11-12T06:28:35.8690747Z #5 extracting sha256:8341816e3d13e8e5d633d75e45017ead6bcfe6ed0af190ee6e9332134aaad1ff done
+2024-11-12T06:28:35.8692195Z #5 extracting sha256:4776ce5c9d229932156e3d8af45212f821f576b9618bdda14a598009a8fa5aab done
+2024-11-12T06:28:35.8693506Z #5 extracting sha256:f85ca3cd33c2f9f02b361962ac5ebc99c4e1686a3149d8aeaf463a97ccc9f16e
+2024-11-12T06:28:36.0312534Z #5 extracting sha256:f85ca3cd33c2f9f02b361962ac5ebc99c4e1686a3149d8aeaf463a97ccc9f16e 0.1s done
+2024-11-12T06:28:36.0314047Z #5 extracting sha256:161385205a51bf9ba008a8b886115c870c8efcb4aa39684196258a99783e7c70
+2024-11-12T06:28:37.8345388Z #5 extracting sha256:161385205a51bf9ba008a8b886115c870c8efcb4aa39684196258a99783e7c70 1.7s done
+2024-11-12T06:28:37.9694755Z #5 extracting sha256:abc607d67610d44c987a738512646ce58c6fdefdcbf470491a091c605c328e54
+2024-11-12T06:28:38.0871092Z #5 extracting sha256:abc607d67610d44c987a738512646ce58c6fdefdcbf470491a091c605c328e54 done
+2024-11-12T06:28:38.0873001Z #5 extracting sha256:8fe0d2a6246dbd2d1ea17e2b74b967c9be4786b8651428d0dad86db3be07ba93 0.1s
+2024-11-12T06:28:40.5397849Z #5 extracting sha256:8fe0d2a6246dbd2d1ea17e2b74b967c9be4786b8651428d0dad86db3be07ba93 2.4s done
+2024-11-12T06:28:40.6953816Z #5 DONE 7.2s
+2024-11-12T06:28:40.8466199Z 
+2024-11-12T06:28:40.8467473Z #6 [2/2] RUN npm i -g serverless@4.x
+2024-11-12T06:28:43.5721105Z #6 2.876 
+2024-11-12T06:28:43.5721716Z #6 2.876 added 57 packages in 3s
+2024-11-12T06:28:43.7536712Z #6 2.876 
+2024-11-12T06:28:43.7537742Z #6 2.876 15 packages are looking for funding
+2024-11-12T06:28:43.7538507Z #6 2.876   run `npm fund` for details
+2024-11-12T06:28:43.7539165Z #6 2.877 npm notice
+2024-11-12T06:28:43.7540019Z #6 2.877 npm notice New minor version of npm available! 10.8.2 -> 10.9.0
+2024-11-12T06:28:43.7541241Z #6 2.877 npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.9.0
+2024-11-12T06:28:43.7542328Z #6 2.877 npm notice To update run: npm install -g npm@10.9.0
+2024-11-12T06:28:43.7543203Z #6 2.877 npm notice
+2024-11-12T06:28:43.7543717Z #6 DONE 2.9s
+2024-11-12T06:28:43.7543970Z 
+2024-11-12T06:28:43.7544171Z #7 exporting to image
+2024-11-12T06:28:43.7544790Z #7 exporting layers
+2024-11-12T06:28:44.7236575Z #7 exporting layers 1.1s done
+2024-11-12T06:28:44.7455157Z #7 writing image sha256:92d59fa0738d9cf47c8c5dad1957763d6b0d6a762088920d4782a0832c937daa done
+2024-11-12T06:28:44.7457588Z #7 naming to docker.io/library/004bf0:0dddb1b98c02490cbd3e7567986a48ca done
+2024-11-12T06:28:44.7459473Z #7 DONE 1.1s
+2024-11-12T06:28:44.7512038Z ##[endgroup]
+2024-11-12T06:28:44.7888217Z ##[group]Run actions/checkout@v4
+2024-11-12T06:28:44.7888638Z with:
+2024-11-12T06:28:44.7889097Z   repository: serverless/aws-ai-stack
+2024-11-12T06:28:44.7889649Z   token: ***
+2024-11-12T06:28:44.7889994Z   ssh-strict: true
+2024-11-12T06:28:44.7890375Z   ssh-user: git
+2024-11-12T06:28:44.7890716Z   persist-credentials: true
+2024-11-12T06:28:44.7891104Z   clean: true
+2024-11-12T06:28:44.7891557Z   sparse-checkout-cone-mode: true
+2024-11-12T06:28:44.7891919Z   fetch-depth: 1
+2024-11-12T06:28:44.7892256Z   fetch-tags: false
+2024-11-12T06:28:44.7892659Z   show-progress: true
+2024-11-12T06:28:44.7892960Z   lfs: false
+2024-11-12T06:28:44.7893289Z   submodules: false
+2024-11-12T06:28:44.7893696Z   set-safe-directory: true
+2024-11-12T06:28:44.7894069Z ##[endgroup]
+2024-11-12T06:28:45.0750798Z Syncing repository: serverless/aws-ai-stack
+2024-11-12T06:28:45.0753114Z ##[group]Getting Git version info
+2024-11-12T06:28:45.0754090Z Working directory is '/home/runner/work/aws-ai-stack/aws-ai-stack'
+2024-11-12T06:28:45.0754955Z [command]/usr/bin/git version
+2024-11-12T06:28:45.0757300Z git version 2.47.0
+2024-11-12T06:28:45.0785887Z ##[endgroup]
+2024-11-12T06:28:45.0805250Z Temporarily overriding HOME='/home/runner/work/_temp/c588c047-695b-4afe-b909-c9fb04fa6142' before making global git config changes
+2024-11-12T06:28:45.0806314Z Adding repository directory to the temporary git global config as a safe directory
+2024-11-12T06:28:45.0811703Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/aws-ai-stack/aws-ai-stack
+2024-11-12T06:28:45.0854569Z Deleting the contents of '/home/runner/work/aws-ai-stack/aws-ai-stack'
+2024-11-12T06:28:45.0859045Z ##[group]Initializing the repository
+2024-11-12T06:28:45.0863822Z [command]/usr/bin/git init /home/runner/work/aws-ai-stack/aws-ai-stack
+2024-11-12T06:28:45.0947707Z hint: Using 'master' as the name for the initial branch. This default branch name
+2024-11-12T06:28:45.0949258Z hint: is subject to change. To configure the initial branch name to use in all
+2024-11-12T06:28:45.0950556Z hint: of your new repositories, which will suppress this warning, call:
+2024-11-12T06:28:45.0951570Z hint:
+2024-11-12T06:28:45.0952227Z hint: 	git config --global init.defaultBranch <name>
+2024-11-12T06:28:45.0952741Z hint:
+2024-11-12T06:28:45.0953390Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2024-11-12T06:28:45.0954505Z hint: 'development'. The just-created branch can be renamed via this command:
+2024-11-12T06:28:45.0955145Z hint:
+2024-11-12T06:28:45.0955624Z hint: 	git branch -m <name>
+2024-11-12T06:28:45.0958340Z Initialized empty Git repository in /home/runner/work/aws-ai-stack/aws-ai-stack/.git/
+2024-11-12T06:28:45.0970287Z [command]/usr/bin/git remote add origin https://github.com/serverless/aws-ai-stack
+2024-11-12T06:28:45.1007987Z ##[endgroup]
+2024-11-12T06:28:45.1009266Z ##[group]Disabling automatic garbage collection
+2024-11-12T06:28:45.1013176Z [command]/usr/bin/git config --local gc.auto 0
+2024-11-12T06:28:45.1046703Z ##[endgroup]
+2024-11-12T06:28:45.1047647Z ##[group]Setting up auth
+2024-11-12T06:28:45.1056572Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2024-11-12T06:28:45.1095625Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2024-11-12T06:28:45.1498303Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2024-11-12T06:28:45.1532353Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2024-11-12T06:28:45.1794858Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2024-11-12T06:28:45.1832528Z ##[endgroup]
+2024-11-12T06:28:45.1833526Z ##[group]Fetching the repository
+2024-11-12T06:28:45.1841626Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0dfb2f00e26b237c912627c6a25855e08b875e3e:refs/remotes/pull/21/merge
+2024-11-12T06:28:45.5669411Z From https://github.com/serverless/aws-ai-stack
+2024-11-12T06:28:45.5671193Z  * [new ref]         0dfb2f00e26b237c912627c6a25855e08b875e3e -> pull/21/merge
+2024-11-12T06:28:45.5703495Z ##[endgroup]
+2024-11-12T06:28:45.5704642Z ##[group]Determining the checkout info
+2024-11-12T06:28:45.5705805Z ##[endgroup]
+2024-11-12T06:28:45.5712824Z [command]/usr/bin/git sparse-checkout disable
+2024-11-12T06:28:45.5802190Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2024-11-12T06:28:45.5847132Z ##[group]Checking out the ref
+2024-11-12T06:28:45.5853621Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/21/merge
+2024-11-12T06:28:45.6051409Z Note: switching to 'refs/remotes/pull/21/merge'.
+2024-11-12T06:28:45.6055122Z 
+2024-11-12T06:28:45.6058699Z You are in 'detached HEAD' state. You can look around, make experimental
+2024-11-12T06:28:45.6060348Z changes and commit them, and you can discard any commits you make in this
+2024-11-12T06:28:45.6076310Z state without impacting any branches by switching back to a branch.
+2024-11-12T06:28:45.6077294Z 
+2024-11-12T06:28:45.6077907Z If you want to create a new branch to retain commits you create, you may
+2024-11-12T06:28:45.6079487Z do so (now or later) by using -c with the switch command. Example:
+2024-11-12T06:28:45.6080272Z 
+2024-11-12T06:28:45.6080688Z   git switch -c <new-branch-name>
+2024-11-12T06:28:45.6081235Z 
+2024-11-12T06:28:45.6081541Z Or undo this operation with:
+2024-11-12T06:28:45.6082173Z 
+2024-11-12T06:28:45.6082473Z   git switch -
+2024-11-12T06:28:45.6082865Z 
+2024-11-12T06:28:45.6083530Z Turn off this advice by setting config variable advice.detachedHead to false
+2024-11-12T06:28:45.6084492Z 
+2024-11-12T06:28:45.6085558Z HEAD is now at 0dfb2f0 Merge 719b55e4e98a9afcf9519ca90b4566db349691b9 into 06192019156c5f91b447b133e8c8ec91386acf80
+2024-11-12T06:28:45.6089457Z ##[endgroup]
+2024-11-12T06:28:45.6121901Z [command]/usr/bin/git log -1 --format=%H
+2024-11-12T06:28:45.6150659Z 0dfb2f00e26b237c912627c6a25855e08b875e3e
+2024-11-12T06:28:45.6574584Z ##[group]Run actions/setup-node@v4
+2024-11-12T06:28:45.6575273Z with:
+2024-11-12T06:28:45.6575681Z   node-version: 22.x
+2024-11-12T06:28:45.6576310Z   cache: npm
+2024-11-12T06:28:45.6577058Z   always-auth: false
+2024-11-12T06:28:45.6578118Z   check-latest: false
+2024-11-12T06:28:45.6578786Z   token: ***
+2024-11-12T06:28:45.6579280Z ##[endgroup]
+2024-11-12T06:28:45.8236823Z Found in cache @ /opt/hostedtoolcache/node/22.10.0/x64
+2024-11-12T06:28:45.8245002Z ##[group]Environment details
+2024-11-12T06:28:49.2501869Z node: v22.10.0
+2024-11-12T06:28:49.2502585Z npm: 10.9.0
+2024-11-12T06:28:49.2503376Z yarn: 1.22.22
+2024-11-12T06:28:49.2504718Z ##[endgroup]
+2024-11-12T06:28:49.2524218Z [command]/opt/hostedtoolcache/node/22.10.0/x64/bin/npm config get cache
+2024-11-12T06:28:49.5596771Z /home/runner/.npm
+2024-11-12T06:28:49.7514128Z npm cache is not found
+2024-11-12T06:28:49.7650909Z ##[group]Run npm ci
+2024-11-12T06:28:49.7651296Z [36;1mnpm ci[0m
+2024-11-12T06:28:49.7730973Z shell: /usr/bin/bash -e {0}
+2024-11-12T06:28:49.7731507Z ##[endgroup]
+2024-11-12T06:28:58.4549192Z 
+2024-11-12T06:28:58.4557850Z added 754 packages, and audited 762 packages in 9s
+2024-11-12T06:28:58.4558525Z 
+2024-11-12T06:28:58.4559149Z 219 packages are looking for funding
+2024-11-12T06:28:58.4559877Z   run `npm fund` for details
+2024-11-12T06:28:58.4728315Z 
+2024-11-12T06:28:58.4729315Z 8 vulnerabilities (1 low, 3 moderate, 4 high)
+2024-11-12T06:28:58.4729720Z 
+2024-11-12T06:28:58.4729941Z To address all issues, run:
+2024-11-12T06:28:58.4730340Z   npm audit fix
+2024-11-12T06:28:58.4730534Z 
+2024-11-12T06:28:58.4730779Z Run `npm audit` for details.
+2024-11-12T06:28:58.5039018Z ##[group]Run aws-actions/configure-aws-credentials@v4
+2024-11-12T06:28:58.5039558Z with:
+2024-11-12T06:28:58.5040135Z   role-to-assume: arn:aws:iam::488110005556:role/GithubActionsDeploymentRole
+2024-11-12T06:28:58.5040708Z   aws-region: us-east-1
+2024-11-12T06:28:58.5041062Z   audience: sts.amazonaws.com
+2024-11-12T06:28:58.5041503Z ##[endgroup]
+2024-11-12T06:28:58.7838461Z Assuming role with OIDC
+2024-11-12T06:28:58.9421182Z Authenticated as assumedRoleId AROAXDJM7TU2CLKDVRMRV:GitHubActions
+2024-11-12T06:28:59.0043331Z ##[group]Run serverless/github-action@v4
+2024-11-12T06:28:59.0043924Z with:
+2024-11-12T06:28:59.0044281Z   args: deploy --stage pr-21
+2024-11-12T06:28:59.0044676Z env:
+2024-11-12T06:28:59.0045089Z   AWS_DEFAULT_REGION: us-east-1
+2024-11-12T06:28:59.0045496Z   AWS_REGION: us-east-1
+2024-11-12T06:28:59.0045941Z   AWS_ACCESS_KEY_ID: ***
+2024-11-12T06:28:59.0046544Z   AWS_SECRET_ACCESS_KEY: ***
+2024-11-12T06:28:59.0052476Z   AWS_SESSION_TOKEN: ***
+2024-11-12T06:28:59.0056289Z   SERVERLESS_LICENSE_KEY: ***
+2024-11-12T06:28:59.0056674Z ##[endgroup]
+2024-11-12T06:28:59.0277072Z ##[command]/usr/bin/docker run --name bf00dddb1b98c02490cbd3e7567986a48ca_8c7600 --label 004bf0 --workdir /github/workspace --rm -e "AWS_DEFAULT_REGION" -e "AWS_REGION" -e "AWS_ACCESS_KEY_ID" -e "AWS_SECRET_ACCESS_KEY" -e "AWS_SESSION_TOKEN" -e "SERVERLESS_LICENSE_KEY" -e "INPUT_ARGS" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_ID_TOKEN_REQUEST_URL" -e "ACTIONS_ID_TOKEN_REQUEST_TOKEN" -e "ACTIONS_RESULTS_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/aws-ai-stack/aws-ai-stack":"/github/workspace" 004bf0:0dddb1b98c02490cbd3e7567986a48ca deploy --stage pr-21
+2024-11-12T06:29:02.9786793Z 
+2024-11-12T06:29:04.2937053Z Serverless ϟ Compose
+2024-11-12T06:29:04.2939516Z 
+2024-11-12T06:29:10.5736268Z ✔ eventBus
+2024-11-12T06:29:10.5736928Z     EventBusName: event-bus-pr-21
+2024-11-12T06:29:10.5738096Z     ServerlessDeploymentBucketName: serverless-framework-deployments-us-east-1-c9f95c2a-2295
+2024-11-12T06:29:10.5739231Z     EventBusArn: arn:aws:events:us-east-1:488110005556:event-bus/event-bus-pr-21
+2024-11-12T06:29:10.5739938Z  
+2024-11-12T06:29:33.0517864Z ✔ businessApi
+2024-11-12T06:29:33.0519084Z     BusinessApiUrl: https://vnfsqwjwil.execute-api.us-east-1.amazonaws.com
+2024-11-12T06:29:33.0521039Z     ApiLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:488110005556:function:business-pr-21-api:4
+2024-11-12T06:29:33.0522254Z     HttpApiId: vnfsqwjwil
+2024-11-12T06:29:33.0523305Z     ServerlessDeploymentBucketName: serverless-framework-deployments-us-east-1-c9f95c2a-2295
+2024-11-12T06:29:33.0524397Z     HttpApiUrl: https://vnfsqwjwil.execute-api.us-east-1.amazonaws.com
+2024-11-12T06:29:33.0524968Z  
+2024-11-12T06:29:37.7888684Z ✔ aiChatApi
+2024-11-12T06:29:37.7890342Z     ApiLambdaFunctionUrl: https://btq5pfdvwp3eudhged6w7u2mmq0ipwih.lambda-url.us-east-1.on.aws/
+2024-11-12T06:29:37.7893097Z     ApiLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:488110005556:function:ai-chat-api-pr-21-api:4
+2024-11-12T06:29:37.7895205Z     ChatApiUrl: https://btq5pfdvwp3eudhged6w7u2mmq0ipwih.lambda-url.us-east-1.on.aws/
+2024-11-12T06:29:37.7897711Z     ServerlessDeploymentBucketName: serverless-framework-deployments-us-east-1-c9f95c2a-2295
+2024-11-12T06:29:37.7898954Z  
+2024-11-12T06:29:57.8666524Z ✔ businessWorker
+2024-11-12T06:29:57.8668149Z     WorkerLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:488110005556:function:business-worker-pr-21-worker:4
+2024-11-12T06:29:57.8669978Z     ServerlessDeploymentBucketName: serverless-framework-deployments-us-east-1-c9f95c2a-2295
+2024-11-12T06:29:57.8671164Z  
+2024-11-12T06:30:03.5717878Z ✔ auth
+2024-11-12T06:30:03.5719621Z     ApiLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:488110005556:function:auth-pr-21-api:4
+2024-11-12T06:30:03.5720984Z     HttpApiId: 0t60jm1tl4
+2024-11-12T06:30:03.5722190Z     UserTableArn: arn:aws:dynamodb:us-east-1:488110005556:table/user-table-pr-21
+2024-11-12T06:30:03.5723206Z     AuthApiUrl: https://0t60jm1tl4.execute-api.us-east-1.amazonaws.com
+2024-11-12T06:30:03.5724298Z     ServerlessDeploymentBucketName: serverless-framework-deployments-us-east-1-c9f95c2a-2295
+2024-11-12T06:30:03.5725634Z     HttpApiUrl: https://0t60jm1tl4.execute-api.us-east-1.amazonaws.com
+2024-11-12T06:30:03.5726654Z  
+2024-11-12T06:30:51.6292688Z ✔ web
+2024-11-12T06:30:51.6299418Z     AppLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:488110005556:function:web-pr-21-app:1
+2024-11-12T06:30:51.6301388Z     HttpApiId: 8oor67zgsj
+2024-11-12T06:30:51.6303585Z     ServerlessDeploymentBucketName: serverless-framework-deployments-us-east-1-c9f95c2a-2295
+2024-11-12T06:30:51.6305299Z     HttpApiUrl: https://8oor67zgsj.execute-api.us-east-1.amazonaws.com
+2024-11-12T06:30:51.6306238Z  
+2024-11-12T06:30:51.6327379Z Results: 6 services succeeded, 0 failed, 0 skipped, 6 total    Time: 1m 48s
+2024-11-12T06:30:51.6328192Z 
+2024-11-12T06:30:51.7992812Z Post job cleanup.
+2024-11-12T06:30:51.9215058Z Post job cleanup.
+2024-11-12T06:30:52.0800679Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/aws-ai-stack/aws-ai-stack --files-from manifest.txt --use-compress-program zstdmt
+2024-11-12T06:30:55.0144192Z Cache Size: ~27 MB (28232528 B)
+2024-11-12T06:30:55.1536673Z Cache saved successfully
+2024-11-12T06:30:55.1608087Z Cache saved with the key: node-cache-Linux-x64-npm-b2fe726da52625d2d30701b26fb1b1406a32ed1ec991628f84ae1732c1dc9f7b
+2024-11-12T06:30:55.1752146Z Post job cleanup.
+2024-11-12T06:30:55.2694744Z [command]/usr/bin/git version
+2024-11-12T06:30:55.2737060Z git version 2.47.0
+2024-11-12T06:30:55.2779998Z Temporarily overriding HOME='/home/runner/work/_temp/3b63ddfd-98bb-4be4-82fc-c680a4d35059' before making global git config changes
+2024-11-12T06:30:55.2782323Z Adding repository directory to the temporary git global config as a safe directory
+2024-11-12T06:30:55.2786430Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/aws-ai-stack/aws-ai-stack
+2024-11-12T06:30:55.2821101Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2024-11-12T06:30:55.2853716Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2024-11-12T06:30:55.3093896Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2024-11-12T06:30:55.3115356Z http.https://github.com/.extraheader
+2024-11-12T06:30:55.3129293Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2024-11-12T06:30:55.3164405Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2024-11-12T06:30:55.3648026Z Cleaning up orphan processes
